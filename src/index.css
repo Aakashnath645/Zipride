@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #F8F9FF;
+    --surface: #FFFFFF;
+    --surface-raised: #F0F1FA;
+    --border: #E2E4F0;
+    --border-strong: #C8CADC;
+    --text-primary: #0A0A1A;
+    --text-secondary: #4A4A6A;
+    --text-muted: #8A8AAA;
+    --primary: #FFD700;
+    --primary-hover: #FFC200;
+    --primary-text: #0A0A1A;
+    --accent: #6C63FF;
+    --accent-hover: #5A52E0;
+    --success: #22C55E;
+    --error: #EF4444;
+    --warning: #F97316;
+    --map-overlay: rgba(255,255,255,0.92);
+  }
+
+  .dark {
+    --background: #0A0A0F;
+    --surface: #1A1A2E;
+    --surface-raised: #252540;
+    --border: #2A2A4A;
+    --border-strong: #3A3A5A;
+    --text-primary: #F0F0FF;
+    --text-secondary: #A0A0C0;
+    --text-muted: #606080;
+    --primary: #FFD700;
+    --primary-hover: #FFC200;
+    --primary-text: #0A0A1A;
+    --accent: #7C73FF;
+    --accent-hover: #8A82FF;
+    --success: #4ADE80;
+    --error: #F87171;
+    --warning: #FB923C;
+    --map-overlay: rgba(10,10,15,0.92);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  *:not(button):not(a):not(input):not(select):not(textarea) {
+    transition: background-color 0.2s, border-color 0.2s, color 0.15s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes check-stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px !important;
+}
+
+.user-marker-pulse {
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+.route-animated {
+  animation: dash-flow 1s linear infinite;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
