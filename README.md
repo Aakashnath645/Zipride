@@ -8,6 +8,21 @@
   A modern cab booking web app with route search, ride tracking, wallet, and profile management.
 </p>
 
+## Quick Preview
+
+<table>
+  <tr>
+    <td><img src="./docs/screenshots/onboarding.png" alt="Onboarding" width="320" /></td>
+    <td><img src="./docs/screenshots/home.png" alt="Home dashboard" width="320" /></td>
+    <td><img src="./docs/screenshots/search.png" alt="Destination search" width="320" /></td>
+  </tr>
+  <tr>
+    <td><img src="./docs/screenshots/wallet.png" alt="Wallet" width="320" /></td>
+    <td><img src="./docs/screenshots/profile.png" alt="Profile" width="320" /></td>
+    <td><img src="./docs/screenshots/notifications.png" alt="Notifications" width="320" /></td>
+  </tr>
+</table>
+
 ## Overview
 
 ZipRide is a frontend-focused ride-booking experience built with React, TypeScript, and Vite. The app includes onboarding, map-based pickup and drop selection, booking flow screens, wallet transactions, notification center, and user profile settings.
