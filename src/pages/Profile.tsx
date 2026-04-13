@@ -292,7 +292,7 @@ function Profile() {
                         App Version
                       </p>
                     </div>
-                    <span className="text-sm text-[var(--text-muted)]">v1.0.0</span>
+                    <span className="text-sm text-[var(--text-muted)]">v1.0.1</span>
                   </div>
 
                   <Separator />
