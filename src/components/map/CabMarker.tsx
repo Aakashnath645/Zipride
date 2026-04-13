@@ -12,7 +12,7 @@ export default function CabMarker({ position, bearing }: CabMarkerProps) {
   const icon = useMemo(
     () =>
       L.divIcon({
-        className: '',
+        className: 'cab-marker-animated',
         html: `
           <div style="width:36px;height:36px;transition:transform 0.5s ease;transform:rotate(${bearing}deg);">
             <svg viewBox="0 0 36 36" width="36" height="36" xmlns="http://www.w3.org/2000/svg">

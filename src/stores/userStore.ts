@@ -11,12 +11,12 @@ interface UserState {
 }
 
 const defaultUser: User = {
-  id: 'usr-001',
-  name: 'Aakash Kumar',
-  email: 'aakash@zipride.in',
-  phone: '+91-9876543210',
+  id: '',
+  name: '',
+  email: '',
+  phone: '',
   isAuthenticated: false,
-  memberSince: '2025-06-15',
+  memberSince: new Date().toISOString().split('T')[0],
 };
 
 export const useUserStore = create<UserState>()(

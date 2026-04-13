@@ -150,3 +150,12 @@ This project includes `vercel.json` and can be deployed to Vercel directly.
 ## License
 
 This repository currently does not define a license file.
+
+## Changelog
+
+**[v1.0.1] - 2026-04-13**
+- **Authentication**: Removed static user mocks and implemented interactive localized storage session capture using Zustand persisting state middleware. Unauthenticated requests are now redirected via a protected router layout logic.
+- **Map Animations**: Enabled smooth 2.5s location interpolation transforms for the Cab marker transitioning.
+- **Real-World Empty States**: Cleaned up the app by migrating to zero-data starting states, providing a cleaner production-like empty profile template.
+- **Security**: Added standard HTTP headers like `X-Frame-Options` and `Strict-Transport-Security` to vercel.json. Volumetric DDoS attacks are automatically absorbed by Vercel edge endpoints framework.
+

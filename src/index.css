@@ -92,6 +92,10 @@ html, body, #root {
   }
 }
 
+.cab-marker-animated {
+  transition: transform 2.5s linear;
+}
+
 @keyframes dash-flow {
   to {
     stroke-dashoffset: -24;

@@ -19,32 +19,7 @@ interface NotificationState {
   unreadCount: () => number;
 }
 
-const defaultNotifications: Notification[] = [
-  {
-    id: 'notif-1',
-    title: 'Welcome to ZipRide!',
-    message: 'Thanks for joining ZipRide. Enjoy your first ride with us and get 50% off using code FIRST50.',
-    type: 'promo',
-    read: false,
-    createdAt: new Date(Date.now() - 1000 * 60 * 30).toISOString(),
-  },
-  {
-    id: 'notif-2',
-    title: 'Safety Update',
-    message: 'We have enhanced our SOS feature. You can now share your live location with emergency contacts during rides.',
-    type: 'system',
-    read: false,
-    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 2).toISOString(),
-  },
-  {
-    id: 'notif-3',
-    title: 'Wallet Bonus',
-    message: 'Add Rs.500 to your ZipRide wallet and get Rs.50 cashback. Offer valid for a limited time!',
-    type: 'payment',
-    read: false,
-    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 5).toISOString(),
-  },
-];
+const defaultNotifications: Notification[] = [];
 
 export const useNotificationStore = create<NotificationState>()(
   persist(

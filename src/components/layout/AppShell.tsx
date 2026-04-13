@@ -1,9 +1,16 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, Navigate } from 'react-router-dom';
 import TopBar from './TopBar';
 import BottomNav from './BottomNav';
 import SideNav from './SideNav';
+import { useUserStore } from '@/stores/userStore';
 
 export default function AppShell() {
+  const isAuthenticated = useUserStore((s) => s.isAuthenticated);
+
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
+  }
+
   return (
     <div className="flex h-full w-full overflow-hidden bg-[var(--background)]">
       <SideNav />
